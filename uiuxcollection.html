@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI UX COLLECTION</title>
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="uiuxcollec.css">
+
+</head>
+<body>
+
+<!-- Nav -->
+<div class="nav-container">
+  <a href="index.html"> 
+    <div class="logo">
+    <img src="images/logo3.png" alt="Website Logo">
+</div>
+</a>
+  <div class="menu">
+      <img src="images/menu3.png" alt="Menu Icon" id="menu-icon">
+  </div>
+</div>
+
+<!-- Full-Screen Menu -->
+<div class="fullscreen-menu" id="fullscreen-menu">
+  <span class="close-btn" id="close-btn">&times;</span>
+  <ul>
+      <li>
+          <a href="index.html">
+              <span>H</span><span>O</span><span>M</span><span>E</span>
+          </a>
+      </li>
+      <li>
+          <a href="work.html">
+              <span>W</span><span>O</span><span>R</span><span>K</span>
+          </a>
+      </li>
+      <li>
+          <a href="aboutMe.html">
+              <span>A</span><span>B</span><span>O</span><span>U</span><span>T</span>
+          </a>
+      </li>
+      <li>
+          <a href="contact.html">
+              <span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span>
+          </a>
+      </li>
+  </ul>
+</div>
+
+
+
+
+
+     
+    <!--hero typo-->
+
+    <section class="hero">
+
+        <div class="hero-typo">
+            
+          <div class="typo1">
+            <div class="box11">My</div>
+            <div class="box22">UI/UX</div>
+            <div class="box33">Design</div>
+          </div>
+
+          <div class="typo2">
+
+              <div class="box44">
+                <img class="startline1" src="images/startline.png">
+              </div>
+              <div class="box5">Collection</div>
+              <div class="box6">
+                <img class="startline2" src="images/startline.png">
+              </div>
+
+
+          </div>
+
+
+
+        </div>
+    </section>
+ 
+
+    <!--slider-->
+      <section class="slider">
+
+
+        <div class="slider-box">
+
+             <div class="img-box">
+
+              <div class="pic">
+                <a href="uicasestudy.html">
+                <img src="images/casepix01.svg">
+              </a>
+              </div>
+              <div class="pic-info">
+                <div class="index">O1</div>
+                <div class="pic-name">Web Design</div>
+
+              </div>
+               </div>
+
+
+
+
+             <div class="img-box">
+              <div class="pic">
+                 
+                <a href="uicase02.html">
+                  <img src="images/casepix02.svg">
+                </a>
+                
+
+
+               
+              </div>
+              <div class="pic-info">
+
+                <div class="index">O2</div>
+                <div class="pic-name">App Design</div>
+
+              </div>
+              </div>
+
+
+
+             <div class="img-box">
+              <div class="pic">
+                <a href="uicase03.html">
+                <img src="images/uxpix03.svg">
+              </a>
+              </div>
+              <div class="pic-info">
+                <div class="index">O3</div>
+                <div class="pic-name">Landing Page</div>
+              </div>
+             </div>
+
+
+
+        </div>
+
+
+
+      </section>
+
+  <BR><BR>
+    <!-- FOOTER -->
+ <!-- FOOTER -->
+
+ <div class="footer-wrapper">
+  <div class="container footer-sec">
+      <div class="row">
+          <div class="col-3 footcol1">
+              <div class="foot-sec1">Hi<span class="exclamation">!</span></div>
+          </div>
+          <div class="col-6 footcol2">
+              <div class="box1">You have an idea? I got the vision</div>
+              <div class="box2">Let’s get in touch</div>
+              <div class="box3">
+                  <!-- LinkedIn Anchor -->
+                  <a href="https://www.linkedin.com/in/tanha-munia-216839232/" target="_blank">
+                      <img src="images/lnk.svg" alt="LinkedIn">
+                  </a>
+                  <!-- GitHub Anchor -->
+                  <a href="https://github.com/Munsb0t" target="_blank">
+                      <img src="images/GitHub.png" alt="GitHub">
+                  </a>
+              </div>
+              <div class="col-lg-4 col-md-5 tBtn">
+                  <div class="button-container">
+                      <!-- Discover Button Anchor (to email) -->
+                      <a href="mailto:tanhaamuniaa@gmail.com"> 
+                          <div class="circle">
+                              <span>DISCOVER</span>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-3 footcol3">
+              <img class="footer-img" src="images/footerIMG.png" alt="Footer Image">
+          </div>
+      </div>
+  </div>
+</div>
+
+  
+  
+  <script>
+    // Menu toggle logic
+const menuIcon = document.getElementById("menu-icon");
+const fullscreenMenu = document.getElementById("fullscreen-menu");
+const closeBtn = document.getElementById("close-btn");
+
+// Open the fullscreen menu
+menuIcon.addEventListener("click", () => {
+    fullscreenMenu.classList.add("active");
+});
+
+// Close the fullscreen menu
+closeBtn.addEventListener("click", () => {
+    fullscreenMenu.classList.remove("active");
+});
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,657 @@
+body
+{
+    margin: 0 0;
+    padding: 0 0;
+    background-color: #E7E8E7;
+
+}
+
+@font-face {
+    font-family: gofak;
+    src: url(fonts/GofakClassyRegular-lxB1y.otf);
+}
+@font-face {
+    font-family:afteris ;
+    src: url(fonts/afteris.otf);
+}
+
+@font-face {
+    font-family:dahlia;
+    src: url(fonts/DahliaRegictik-lgjdX.otf);
+}
+
+@font-face {
+    font-family: myFont;
+    src: url(fonts/Vaselia.ttf);
+}
+
+
+
+
+/* Navigation Bar */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+
+    box-sizing: border-box;
+}
+
+.logo img {
+    max-height: 80px;
+}
+
+.menu img {
+    max-height: 50px;
+    cursor: pointer;
+}
+
+/* Reset link styles */
+.fullscreen-menu ul li a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent (e.g., li or span) */
+    display: inline-block; /* Ensure proper layout for spans inside */
+}
+
+/* Optional: Hover effect */
+.fullscreen-menu ul li a:hover {
+    color: #7d9179; /* Change to your desired hover color */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+
+/* Full-Screen Menu */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Initial dark background */
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Prevent interaction when hidden */
+    transition: background-color 0.6s ease, opacity 0.4s ease; /* Smooth fade-in */
+    z-index: 1000;
+    font-family: afteris;
+}
+
+.fullscreen-menu.active {
+    background-color: #dfd1a2; /* Matte yellow */
+    opacity: 1; /* Fade in */
+    pointer-events: auto; /* Allow interaction */
+    
+}
+
+.fullscreen-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    opacity: 0; /* Hidden initially */
+    transform: scale(0.95); /* Shrink slightly */
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s; /* Smooth fade-in for list */
+}
+
+.fullscreen-menu.active ul {
+    opacity: 1; /* Fade in menu items */
+    transform: scale(1); /* Return to normal size */
+}
+
+.fullscreen-menu li {
+    font-size: 4.5rem;
+    margin: 20px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.fullscreen-menu li span {
+    display: inline-block; /* Wrap each letter */
+    transition: transform 0.2s ease, color 0.2s ease;
+    transform-origin: bottom left;
+}
+
+/* Domino Tilt Animation */
+.fullscreen-menu li:hover span {
+    animation: dominoTilt 0.5s forwards;
+}
+
+.fullscreen-menu li span:nth-child(1) { animation-delay: 0s; }
+.fullscreen-menu li span:nth-child(2) { animation-delay: 0.05s; }
+.fullscreen-menu li span:nth-child(3) { animation-delay: 0.1s; }
+.fullscreen-menu li span:nth-child(4) { animation-delay: 0.15s; }
+.fullscreen-menu li span:nth-child(5) { animation-delay: 0.2s; }
+
+/* Keyframes for Domino Tilt */
+@keyframes dominoTilt {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(20deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Close Button */
+.close-btn {
+   
+     margin: 0 auto;
+    transform: translateX(-50%);
+    font-size: 4rem; /* Bigger 'X' */
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: translateX(-50%) scale(1.2); /* Subtle hover effect */
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .logo img {
+        max-height: 60px;
+    }
+
+    .menu img {
+        max-height: 40px;
+    }
+
+    .nav-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .fullscreen-menu li {
+        font-size: 3.7rem;
+    }
+}
+
+
+
+/* DOME 1 */
+
+.dome1
+{
+    height:100vh;
+    width: auto;
+    background-color: #8FBFDA;
+    border-radius: 50vw 50vw 0 0; 
+
+}
+.dome1-cont
+{
+    background-color: #E7E8E7;
+}
+
+@font-face {
+    font-family:role;
+    src: url(fonts/role.otf);
+}
+
+
+/* WEBSITE NAME AND BUTTON 1 */
+
+.web-name-container {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.web-name {
+    color: #22303F;
+    font-weight: 700;
+    font-size: 2rem; /* Default font size for larger screens */
+    font-family:role;
+    text-align: center;
+    max-width: 90%; /* Prevents the text from overflowing */
+    word-wrap: break-word; /* Ensures long text wraps properly */
+}
+
+/* Button styles */
+.web-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Adjust for 1440px screens */
+@media (max-width: 1440px) {
+    .web-name {
+        font-size: 1.6rem; /* Slightly reduce font size */
+    }
+}
+
+/* Adjust for 1024px screens */
+@media (max-width: 1024px) {
+    .web-name {
+        font-size: 1.4rem; /* Further reduce font size */
+    }
+}
+
+/* Adjust for screens smaller than 768px */
+@media (max-width: 768px) {
+    .web-name {
+        font-size: 1.1rem; /* Make it smaller for smaller screens */
+    }
+}
+
+/* Adjust for very small screens (like mobile devices) */
+@media (max-width: 480px) {
+    .web-name {
+        font-size: 1.3rem; /* Final adjustment for very small screens */
+    }
+}
+
+
+/* WEBSITE NAME AND BUTTON 2 */
+.web-name-container2, .web-name-container3, .web-name-container4
+{
+    display: flex;
+    width: 100%;
+    height:60%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+   
+    flex-direction: column;
+    
+}
+
+.web-name2
+{
+    color: #FBFFE1;
+    font-weight: 700;
+    font-size: clamp(1rem, 5.2vw + 1rem, 8rem);
+    font-family: gofak;
+    text-align: center;
+}
+
+.web-name3
+{  
+    color: #F9BCC3;
+   
+    font-weight: 700;
+    font-size: clamp(1rem, 5.2vw + 1rem, 8rem);
+    font-family: gofak;
+    text-align: center;
+}
+
+.web-name4
+{  
+    color:#FBFFE1;
+   
+    font-weight: 700;
+    font-size: clamp(1rem, 5.2vw + 1rem, 8rem);
+    font-family: gofak;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.lang-details
+{
+    display: flex;
+    width: 100%;
+    height:10%;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem); 
+    column-gap: 5vw;
+
+}
+
+.lang
+{
+    text-align: start;
+    color: #303b42;
+    font-family: role;
+    font-weight: 800;
+
+}
+
+
+
+.lang-name-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2vw;
+    font-family: dahlia;
+    color:#A6D4D4;
+    flex-wrap: wrap;
+}
+
+.lang-name-container2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2vw;
+    font-family: dahlia;
+    color:#FBFFE1;
+}
+
+.lang-name-container3
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2vw;
+    font-family: dahlia;
+    color: #F9BCC3;
+}
+
+.lang-name-container4
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2vw;
+    font-family: dahlia;
+    color:#FBFFE1;
+}
+
+
+
+
+
+
+          
+          /* FOOTER */
+
+
+.footer-sec
+{
+    background-color: #E8F8E4;
+
+}
+
+.footcol1
+{
+  
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.footcol2
+{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    justify-content: center; /* Centers the content vertically if necessary */
+    text-align: center; /* Centers the text within its container */
+}
+
+.footcol3
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.foot-sec1
+{
+    width: 9vw;
+    font-size: clamp(40px, 10vw, 126px);
+    padding: 1em;
+    color: #FDAF7E;
+    font-family: gofak;
+    
+  
+
+}
+
+.exclamation {
+    font-size: 350px; /* Apply a large font size only to the exclamation mark */
+    vertical-align: top; /* Aligns the exclamation mark with "Hi" */
+    line-height: 0.2; /* Adjust line-height to prevent vertical shift */
+
+}
+
+
+ 
+
+.box1
+{
+  
+    font-size: clamp(1.5rem, 5vw, 3.125rem);
+    font-family: afteris;
+    padding: 1em;
+    display: flex;      
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+.box2
+{
+    height: 3vh;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: adrin;
+    font-size: clamp(18px, 4vw, 48px);
+   
+
+   
+
+}
+
+.box3
+{
+    height:10vh;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    
+}
+
+.box3 img
+{ 
+    transition: transform 0.3s ease; 
+    cursor: pointer; /* Smooth animation for scaling */
+}
+
+    
+.box3 img:hover {
+        transform: scale(1.2); 
+      
+    }
+
+.footer-btn
+{
+    width:200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer-img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.footer-wrapper {
+    background-color: #E8F8E4; /* Extends the background color */
+}
+
+
+
+/* GLOBAL BUTTON */
+
+.circle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centering on the screen */
+}
+
+.button-container .circle {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50%; /* Oval shape by default */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    overflow: hidden;
+    background-color: transparent;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.button-container .circle::before,
+.button-container .circle::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.button-container .circle::before {
+    transform: rotate(5deg);
+}
+
+.button-container .circle::after {
+    transform: rotate(-5deg);
+}
+
+.button-container .circle:hover {
+    transform: scale(1.1); /* Zoom effect */
+    background-color: rgb(241, 248, 145);
+    color: white;
+    border-color: rgb(0, 1, 2);
+}
+
+.button-container .circle:hover::before,
+.button-container .circle:hover::after {
+    border-color: rgb(0, 0, 0);
+}
+
+.button-container .circle span {
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.button-container .circle:hover span {
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .button-container .circle {
+        width: 160px;
+        height: 80px;
+    }
+
+    .button-container .circle span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .button-container .circle {
+        width: 160px;
+        height: 80px;
+        border-radius: 50%; /* Keep it oval on tablet, but ensure smooth responsiveness */
+    }
+
+    .button-container .circle span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-container .circle {
+        width: 150px; /* Keeping oval size */
+        height: 75px;
+        border-radius: 50%; /* Oval shape */
+    }
+
+    .button-container .circle span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    .button-container .circle {
+        width: 140px; /* Adjusting size for very small screens */
+        height: 70px;
+        border-radius: 50%; /* Oval shape */
+    }
+
+    .button-container .circle span {
+        font-size: 13px;
+    }
+}
+
+.lang-name-container img
+{
+    transition: transform 0.3s ease; 
+    cursor: pointer; /* Smooth animation for scaling */
+}
+
+.lang-name-container img:hover
+{
+    transform: scale(1.2); 
+}

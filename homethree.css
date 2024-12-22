@@ -1,0 +1,1555 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+@font-face {
+    font-family:afteris ;
+    src: url(fonts/afteris.otf);
+}
+
+@font-face {
+    font-family:dahlia ;
+    src: url(fonts/DahliaRegictik-lgjdX.otf);
+}
+
+
+@font-face {
+    font-family:wedding ;
+    src: url(fonts/wedding.ttf);
+}
+
+@font-face {
+    font-family:adriana ;
+    src: url(fonts/AdrianagabrielleRegular-5yXXG.otf);
+}
+
+@font-face {
+    font-family:role;
+    src: url(fonts/role.otf);
+}
+
+
+@font-face {
+    font-family: myFont;
+    src: url(fonts/Vaselia.ttf);
+}
+
+@font-face {
+    font-family: mainFont;
+    src: url(fonts/afteris.otf);
+}
+
+@font-face {
+    font-family: adrin;
+    src: url(fonts/adrin.otf);
+}
+
+@font-face {
+    font-family: gofak;
+    src: url(fonts/GofakClassyRegular-lxB1y.otf);
+}
+
+
+
+
+
+/* Navigation Bar */
+.nav-container {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFFFF0;
+
+    box-sizing: border-box;
+}
+
+.logo img {
+    max-height: 80px;
+}
+
+.menu img {
+    max-height: 50px;
+    cursor: pointer;
+}
+
+/* Reset link styles */
+.fullscreen-menu ul li a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent (e.g., li or span) */
+    display: inline-block; /* Ensure proper layout for spans inside */
+}
+
+/* Optional: Hover effect */
+.fullscreen-menu ul li a:hover {
+    color: #7d9179; /* Change to your desired hover color */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+
+
+/* Full-Screen Menu */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Initial dark background */
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Prevent interaction when hidden */
+    transition: background-color 0.6s ease, opacity 0.4s ease; /* Smooth fade-in */
+    z-index: 1000;
+    font-family: afteris;
+}
+
+.fullscreen-menu.active {
+    background-color: #dfd1a2; /* Matte yellow */
+    opacity: 1; /* Fade in */
+    pointer-events: auto; /* Allow interaction */
+    
+}
+
+.fullscreen-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    opacity: 0; /* Hidden initially */
+    transform: scale(0.95); /* Shrink slightly */
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s; /* Smooth fade-in for list */
+}
+
+.fullscreen-menu.active ul {
+    opacity: 1; /* Fade in menu items */
+    transform: scale(1); /* Return to normal size */
+}
+
+.fullscreen-menu li {
+    font-size: 4.5rem;
+    margin: 20px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.fullscreen-menu li span {
+    display: inline-block; /* Wrap each letter */
+    transition: transform 0.2s ease, color 0.2s ease;
+    transform-origin: bottom left;
+}
+
+/* Domino Tilt Animation */
+.fullscreen-menu li:hover span {
+    animation: dominoTilt 0.5s forwards;
+}
+
+.fullscreen-menu li span:nth-child(1) { animation-delay: 0s; }
+.fullscreen-menu li span:nth-child(2) { animation-delay: 0.05s; }
+.fullscreen-menu li span:nth-child(3) { animation-delay: 0.1s; }
+.fullscreen-menu li span:nth-child(4) { animation-delay: 0.15s; }
+.fullscreen-menu li span:nth-child(5) { animation-delay: 0.2s; }
+
+/* Keyframes for Domino Tilt */
+@keyframes dominoTilt {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(20deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Close Button */
+.close-btn {
+   
+     margin: 0 auto;
+    transform: translateX(-50%);
+    font-size: 4rem; /* Bigger 'X' */
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: translateX(-50%) scale(1.2); /* Subtle hover effect */
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .logo img {
+        max-height: 60px;
+    }
+
+    .menu img {
+        max-height: 40px;
+    }
+
+    .nav-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .fullscreen-menu li {
+        font-size: 3.7rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* WORK SECTION */ 
+/* Full screen height */
+.hidden-pg {
+    height: 100vh;
+}
+
+/* Responsive font size with maximum font size to prevent cutting off */
+.hiddenH1 {
+    font-family: 'gofak', sans-serif;
+    font-size: 9.5vw; /* Set font size relative to viewport width */
+      /* Limit font size for large screens */
+    text-align: center; /* Center the text */
+    line-height: 1.2;
+
+}
+
+/* Responsive margin for the button */
+.hidden-btn {
+    margin-left: 40%;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    /* Adjust font size for tablets and smaller screens */
+    .hiddenH1 {
+        font-size: 15vw; /* Adjust for tablet screens */
+    }
+
+    /* Adjust button margin for smaller screens */
+    .hidden-btn {
+        margin-left: 35%;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Adjust font size for mobile screens */
+    .hiddenH1 {
+        font-size: 20vw; /* Adjust for mobile screens */
+    }
+
+    /* Adjust button margin for mobile screens */
+    .hidden-btn {
+        margin-left: 28%;
+    }
+}
+
+/* Oval styles */
+.oval {
+    position: absolute;
+    width: clamp(10%, 17vw, 150px); /* Responsive width */
+    height: clamp(10%, 19vw, 150px); /* Responsive height */
+    background: #eebbb0; /* Oval color */
+    border-radius: 50%; /* Makes it a perfect circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1rem, 2vw, 2rem); /* Responsive text size */
+    color: rgb(0, 0, 0);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
+    animation: fall 4s linear forwards; /* Smooth falling animation */
+    transform: rotate(0deg); /* Initial rotation */
+}
+
+/* Falling animation */
+@keyframes fall {
+    0% {
+        top: -50px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        top: calc(100vh - 200px); /* Prevent falling too far (stops 200px from bottom) */
+    }
+}
+
+/* Ensure the hidden-pg has relative positioning */
+@media (max-width: 500px) {
+    .oval {
+        width: 100px;
+        height: 50px;
+        font-size: 12px;
+    }
+}
+
+/* Limit hidden-pg height and prevent overflow */
+.hidden-pg {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    max-height: 100vh; /* Constrain height */
+    background-color: rgb(230, 248, 255);
+}
+
+
+
+.hidden-pg2
+{
+
+    position: relative;
+    overflow: hidden;
+    height: 110vh;
+ /* Constrain height */
+    background-color: #fae2e4;
+}
+
+#alternativeContent2
+{
+    background-color: #fae2e4;
+}
+
+
+
+.hidden-pg3
+{
+
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    max-height: 100vh; /* Constrain height */
+    background-color: rgb(242, 255, 194);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.work-feature
+{
+   height:auto;
+   background-color:#F8EDDB;
+}
+
+.btnWork    
+{
+  width:120%;
+  height:10vh;
+  border-radius: 459px;
+  position: relative;
+  top:-24%;
+  background-color:#F8EDDB;
+  border: none;
+  font-size: 1.3rem;
+  color: #B8744D;
+  padding-bottom: 30px;
+}
+
+
+.tBtn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.t1, .t2, .t3, .t4, .tBtn, .t5 {
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    
+}
+
+.t1 h1, .t2 h1, .t3 h1, .t4 h1 {
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    line-height: 1; /* Match line height to font size */
+    display: inline-block; /* Shrink container to fit text */
+    box-sizing: border-box; /* Include padding and border in size calculation */
+
+}
+
+
+.t1
+{
+ 
+    height:auto;
+    font-family: wedding;
+    color: #B8744D;
+
+    
+}
+
+
+
+.t5
+{   
+     max-height: 300px;
+  height:100%; 
+
+}
+
+
+
+
+.t6
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    line-height: 1; /* Match line height to font size */
+    display: inline-block; /* Shrink container to fit text */
+    box-sizing: border-box; /* Include padding and border in size calculation */
+ 
+}
+
+
+
+
+.t1 h1
+{
+    font-size: clamp(100px, 15vw, 300px);
+    font-weight: 500;
+    position: relative;
+    top:15%;
+
+}
+.t2 h1
+{
+    font-size: clamp(50px, 8vw, 130px); 
+    position: relative;
+    left: -7%;
+}
+.t3 h1
+{
+    font-size: clamp(60px, 9.5vw, 157px);
+    position: relative;
+    left: 4%;
+}
+
+.t4 h1
+{
+      font-size: clamp(100px, 28.7vw, 550px);
+      position: relative;
+      top:-6%;
+}
+
+
+@media (max-width: 500px) {
+    .t3 h1 
+
+    {
+        left:1px;
+    }
+    .t2 h1
+    {
+        left:1px;
+    }
+    
+    .btnWork    
+    {
+      font-size: 1rem;
+     
+    }
+    
+    .work-feature
+    {
+        height: 80vh;
+        padding-bottom: 20px;
+    } 
+
+    .t4 h1
+    {
+        font-size: 130px;
+    }
+
+
+
+}
+
+
+
+.t2
+{
+    
+    height:auto;
+    font-family: adrin; 
+    color: #B8744D;
+  
+  
+}
+
+@media (max-width: 1024px) { 
+    .t2{
+        top: -4.5vh;
+        left:0vw;  
+    }
+}
+
+
+.t3
+{
+    font-family: role;
+    color: #B8744D;
+    height:auto;
+    
+    font-weight: bold;
+}
+
+
+@media (max-width: 1024px) { 
+    .t3{
+        top: -6.5vh;
+        right: 0.5vw;
+    }
+}
+
+
+.t4
+{
+    
+    height:auto;
+    font-family: gofak;
+    color: #f9ffd0;
+
+
+    
+}
+
+@media (max-width: 1024px) { 
+    .t4{
+        top: -10vh;
+    }
+}
+
+
+
+
+
+@media (max-width: 500px) { 
+    .hidden-pg{
+       height: 80vh;
+    }
+}
+
+
+
+.green
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* GLOBAL BUTTON */
+
+.circle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centering on the screen */
+}
+
+.button-container .circle {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50%; /* Oval shape by default */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    overflow: hidden;
+    background-color: transparent;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.button-container .circle::before,
+.button-container .circle::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.button-container .circle::before {
+    transform: rotate(5deg);
+}
+
+.button-container .circle::after {
+    transform: rotate(-5deg);
+}
+
+.button-container .circle:hover {
+    transform: scale(1.1); /* Zoom effect */
+    background-color: rgb(241, 248, 145);
+    color: white;
+    border-color: rgb(0, 1, 2);
+}
+
+.button-container .circle:hover::before,
+.button-container .circle:hover::after {
+    border-color: rgb(0, 0, 0);
+}
+
+.button-container .circle span {
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.button-container .circle:hover span {
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .button-container .circle {
+        width: 160px;
+        height: 80px;
+    }
+
+    .button-container .circle span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .button-container .circle {
+        width: 160px;
+        height: 80px;
+        border-radius: 50%; /* Keep it oval on tablet, but ensure smooth responsiveness */
+    }
+
+    .button-container .circle span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-container .circle {
+        width: 150px; /* Keeping oval size */
+        height: 75px;
+        border-radius: 50%; /* Oval shape */
+    }
+
+    .button-container .circle span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    .button-container .circle {
+        width: 140px; /* Adjusting size for very small screens */
+        height: 70px;
+        border-radius: 50%; /* Oval shape */
+    }
+
+    .button-container .circle span {
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+
+
+/*home screen */
+
+
+.hero
+{
+    height:100%;
+    background-color: #FFFFF0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+
+.hero-img-cont
+{   
+   width: 63vw;
+   height:auto;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 0;
+   margin-top: 5vh;
+   display: flex;
+
+}
+
+.hero-img-cont2
+{
+    width: 58%;
+    height:auto;
+    margin-top: -4%;
+    margin-left:6%; 
+}
+
+.hero-img-cont3
+{   width: 25%;
+    height:auto;
+    margin-top: -1%;
+    margin-left: -3%;
+  
+
+}
+
+.hero-img-cont4
+{
+    width: 50%;
+    height:auto;
+    margin-top: 2%;
+   
+}
+
+.hero-img-cont5
+{
+  width:78%;
+  height: auto;
+  position: relative;
+  top:-5vh;
+  overflow: hidden;
+
+  
+}
+.hero-img-cont6 
+{
+  margin-bottom: 5vh;
+  
+}
+
+
+.hero-img img
+{
+    
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-img-cont6 img
+{   width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+
+
+
+@media (max-width: 520px) {
+
+    .hero-img-cont, .hero-img-cont2, .hero-img-cont4
+    {
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    
+    .hero-img-cont3
+    {
+        width: 50%;
+        height: 50%;
+    }
+    
+    .hero-img-cont
+    {
+        margin-left: 4vw;
+    }
+    .hero-img-cont2
+    {
+        margin-left: 16vw;
+    }
+    .hero-img-cont5
+    {
+      width:100%;
+      height: 100%;
+      position: relative;
+      top:-1vh;
+      overflow: hidden;
+    
+      
+    }
+
+}
+
+
+
+/* hideden skill pg*/
+
+
+
+
+.typewriter {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.typewriter p {
+    font-family: monospace;
+    font-size: clamp(1rem, 2vw, 2.2rem); /* Responsive font size */
+    margin-inline: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid;
+    animation: typing 3s steps(22) forwards, blink 1s step-end infinite;
+    max-width: 90vw; /* Prevent overflow horizontally */
+    white-space: normal; /* Allow line breaks */
+    word-break: break-word; /* Break long words to avoid overflow */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+ /* SKILL SECTION */  
+
+.btnWork2    
+{
+  width:120%;
+  height:10vh;
+  border-radius: 459px;
+  position: relative;
+  top:-24%;
+  background-color: #FBFFE1;
+  border: none;
+  font-size: 1.3rem;
+  color: #59814f;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+ 
+    .btnWork2   
+    {
+      font-size: 1rem;
+      padding-bottom: 20px;
+     
+    }
+    
+  } 
+
+        
+
+        .skill-level
+        {
+            height: 110vh;
+            background-color: #FBFFE1;
+        }
+
+        .outer-container {
+            background-color: #C5DBBF;
+            height: 90vh; /* 80% of the parent height */
+            width: 400px;  /* 80% of the parent width */
+           /* Center horizontally */
+           border-radius: 50px;
+        }
+
+        .inner-container
+        {
+            background-color: #E9F8E4;
+            height:80vh;
+            margin-top: 100px;
+            border-radius: 50px;
+            width:380px;
+          
+           
+        }
+        
+        .p1,
+        .l1 {
+        
+        text-align: center;
+        height: 13vh;
+        font-size: clamp(20px, 3vw, 40px); /* Adjust font size dynamically */
+        font-family: bohmeian;
+        color:#B8744D; /* Optional: improve text visibility */
+        padding-top: 30px;
+         
+        }
+
+        .k1
+        {
+            
+        }
+
+        .lang-bar1, .lang-bar2, .lang-bar3, .lang-bar4, .lang-bar5, .lang-bar6
+        {
+            height: 8vh;
+            display: flex;
+            justify-content: center;  /* Center horizontally */
+            align-items: center; 
+            color: transparent;
+        }
+
+        .lang-name1,   .lang-name2,   .lang-name3,   .lang-name4,   .lang-name5,   .lang-name6
+        {
+           
+            height:10vh;
+            text-align: center;
+            font-size: clamp(14px, 2vw, 25px); 
+            font-weight: 600;
+            color:#B8744D;
+            display: flex;
+            justify-content: center;  /* Center horizontally */
+            align-items: center; 
+            
+        }
+
+
+
+  .level-1  
+  {
+    background-color: rgb(199, 194, 194);
+   
+  }
+
+  .level-2
+  {
+    background-color: rgb(199, 194, 194);
+  }
+
+  .level-3
+  {
+
+    background-color: rgb(199, 194, 194);
+  }
+
+
+.html-lvl-1, .html-lvl-2, .html-lvl-3
+
+{
+    background-color: rgba(41, 35, 35, 0.774);
+}
+
+.css-lvl-1, .css-lvl-2, .js-lvl-1, .js-lvl-2, .rs-lvl-1, .rs-lvl-2
+{
+    background-color: rgba(41, 35, 35, 0.774);
+}
+
+.bs-lvl-1, 
+.bs-lvl-2
+{
+    background-color: rgba(41, 35, 35, 0.774);
+}
+
+  .gap-row {
+    gap: 10px; /* Adjust the value for more or less spacing */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          /* FOOTER */
+
+
+.footer-sec
+{
+    background-color: #E8F8E4;
+
+}
+
+.footcol1
+{
+  
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.footcol2
+{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    justify-content: center; /* Centers the content vertically if necessary */
+    text-align: center; /* Centers the text within its container */
+}
+
+.footcol3
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.foot-sec1
+{
+    width: 9vw;
+    font-size: clamp(40px, 10vw, 126px);
+    padding: 1em;
+    color: #FDAF7E;
+    font-family: gofak;
+    
+  
+
+}
+
+.exclamation {
+    font-size: 350px; /* Apply a large font size only to the exclamation mark */
+    vertical-align: top; /* Aligns the exclamation mark with "Hi" */
+    line-height: 0.2; /* Adjust line-height to prevent vertical shift */
+
+}
+
+
+ 
+
+.box1
+{
+  
+    font-size: clamp(1.5rem, 5vw, 3.125rem);
+    font-family: afteris;
+    padding: 1em;
+    display: flex;      
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+.box2
+{
+    height: 3vh;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: adrin;
+    font-size: clamp(18px, 4vw, 48px);
+   
+
+   
+
+}
+
+.box3
+{
+    height:10vh;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    
+}
+
+.box3 img
+{ 
+    transition: transform 0.3s ease; 
+    cursor: pointer; /* Smooth animation for scaling */
+}
+
+    
+.box3 img:hover {
+        transform: scale(1.2); 
+      
+    }
+    
+.footer-btn
+{
+    width:200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer-img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.footer-wrapper {
+    background-color: #E8F8E4; /* Extends the background color */
+}
+
+
+
+
+
+/* SLIDER section*/
+
+.btnWork3    
+{
+  width:120%;
+  height:10vh;
+  border-radius: 459px;
+  position: relative;
+  top:-24%;
+  background-color: #FEF0BA;
+  border: none;
+  font-size: 1.3rem;
+  color:  #FDC352;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+ 
+    .btnWork3   
+    {
+      font-size: 1rem;
+      padding-bottom: 20px;
+     
+    }
+    
+  } 
+
+.slider-sec
+{
+    background-color: #FEF0BA;
+
+}
+.work-button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.slider-button
+{    background-color: #FEF0BA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider
+{
+    height: 100vh;
+    width:auto;
+    background-color: #FEF0BA;
+    color:#fff8b8;;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .item
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.img-wrapper
+
+{
+    position: absolute;
+    top:25%;
+    left: 30%;
+    transform: rotate(-20deg);
+   
+
+}
+
+.slider .item .img
+{
+    position: absolute;
+    width: 30vw;
+    height:60vh;
+    
+}
+
+.slider .item .img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slider .item .content
+{
+    position: absolute;
+    z-index: 3;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:7vw;
+}
+
+
+.slider .item .content .wrap
+{
+  
+    letter-spacing: -10px;
+    text-align: center;
+    max-width:2900px;
+    color:  #2C2C2C;
+}
+
+.slider .item .content .wrap .letter {
+    display: inline-block;
+    font-size: inherit; /* Ensure it inherits the parent font size */
+    line-height: inherit; /* Ensure line height scales with font size */
+}
+
+.slider .nav .next, .slider .nav .prev {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    top: calc(50% - 1rem);
+    cursor: pointer;
+    z-index: 4; /* Ensure navigation is above all other elements */
+}
+
+.slider .nav .next {
+    right: 4rem;
+    transform: scale(2) rotate(180deg);
+}
+
+.slider .nav .prev {
+    left: 4rem;
+    transform: scale(2);
+}
+
+.slider .item:not(.is-active) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav div {
+    cursor: pointer;
+    display: inline-block;
+    z-index: 5; /* Ensure nav elements are above others */
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #FDC352;
+    stroke-width: 5px;
+    pointer-events: auto; /* Ensure pointer events are enabled for SVG */
+}
+
+.slider h1
+{
+    font-family: role;
+    font-size: 5rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#FDC352;
+}
+
+
+
+@media (max-width: 600px)
+
+{
+    .slider .item .content
+{
+    font-size: 15px;
+}
+
+
+.slider .item .content .wrap
+{
+
+    max-width:900px;
+  
+}
+}
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    .slider {
+        height: 60vh;
+    }
+
+    .slider .item .content {
+        font-size: 5rem; /* Further reduce font size */
+    }
+
+    .slider .item .img {
+        width: 60vw; /* Adjust image width for smaller screens */
+        height: 30vh; /* Adjust image height */
+    }
+
+    .slider .item .img-wrapper {
+        top: 35%; /* Further adjust positioning */
+        left: 20%;
+    }
+
+    .slider h1 {
+        font-size: 2.5rem; /* Reduce H1 font size */
+    }
+}
+
+/* Adjustments for mobile S (screens smaller than 320px) */
+@media (max-width: 320px) {
+    .slider {
+        height: 50vh;
+    }
+
+    .slider .item .content {
+        font-size: 3rem; /* Make text readable on very small screens */
+    }
+
+    .slider .item .img {
+        width: 80vw;
+        height: 25vh;
+    }
+
+    .slider .item .img-wrapper {
+        top: 40%;
+        left: 10%;
+    }
+
+    .slider h1 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+@media (max-width: 730px) {
+    .slider .nav .next,
+    .slider .nav .prev {
+        top: 8%; /* Move navigation buttons above the images */
+        transform: scale(1.5); /* Reduce the size of arrows if needed */
+    }
+}
+
+
+/*hidden slider*/
+
+/* Hidden Section Styling */
+#alternativeContent3 {
+    position: relative; /* Required for correct positioning of child elements */
+    overflow: hidden;  /* Prevent emoji trails from spilling outside */
+}
+.emoji-trail {
+    position: absolute;
+    pointer-events: none;
+    animation: animate 1s linear infinite;
+}
+@keyframes animate {
+    0% {
+        translate: 0 0;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    30% {
+        translate: 0 100px;
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        translate: 0 80px;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+@keyframes jumpIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero-img-cont, 
+.hero-img-cont2, 
+.hero-img-cont3, 
+.hero-img-cont4, 
+.hero-img-cont5, 
+.hero-img-cont6 {
+    animation: jumpIn 0.6s ease-out;
+    animation-fill-mode: forwards; /* Retain final state */
+    opacity: 0; /* Initially hidden */
+}
+
+.hero-img-cont {
+    animation-delay: 0.2s;
+}
+.hero-img-cont2 {
+    animation-delay: 0.4s;
+}
+.hero-img-cont3 {
+    animation-delay: 0.6s;
+}
+.hero-img-cont4 {
+    animation-delay: 0.8s;
+}
+.hero-img-cont5 {
+    animation-delay: 1s;
+}
+.hero-img-cont6 {
+    animation-delay: 1.2s;
+}
+
+/* Arrow styling */
+.arrow {
+    position: absolute;
+    font-size: 2rem;
+    color: #333;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.arrow-down {
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow-left {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.arrow-right {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+/* Arrow fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

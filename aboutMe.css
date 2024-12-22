@@ -1,0 +1,574 @@
+
+body
+{
+    background-color: #FFEECF;
+    margin: 0;
+    padding: 0;
+  
+    overflow-x: hidden;
+}
+@font-face {
+    font-family:afteris ;
+    src: url(fonts/afteris.otf);
+}
+
+@font-face {
+    font-family:voyage;
+    src: url(fonts/MADEVoyagerPERSONAL_USE-Bold.otf);
+}
+
+@font-face {
+    font-family:kings;
+    src: url(fonts/KingsmanDemo-1GVgg.ttf);
+}
+
+@font-face {
+    font-family:bohem;
+    src: url(fonts/Bohemian\ Soul.otf);
+}
+@font-face {
+    font-family: role;
+    src: url(fonts/role.otf);
+}
+@font-face {
+    font-family:gofak;
+    src: url(fonts/GofakClassyRegular-lxB1y.otf);
+}
+
+@font-face {
+    font-family: adrin;
+    src: url(fonts/adrin.otf);
+}
+/* Navigation Bar */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+
+    box-sizing: border-box;
+}
+
+.logo img {
+    max-height: 80px;
+}
+
+.menu img {
+    max-height: 50px;
+    cursor: pointer;
+    z-index: 10000;
+    position: relative;
+  
+}
+
+/* Reset link styles */
+.fullscreen-menu ul li a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent (e.g., li or span) */
+    display: inline-block; /* Ensure proper layout for spans inside */
+}
+
+/* Optional: Hover effect */
+.fullscreen-menu ul li a:hover {
+    color: #7d9179; /* Change to your desired hover color */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+
+/* Full-Screen Menu */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Initial dark background */
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Prevent interaction when hidden */
+    transition: background-color 0.6s ease, opacity 0.4s ease; /* Smooth fade-in */
+    z-index: 1000;
+    font-family: afteris;
+}
+
+.fullscreen-menu.active {
+    background-color: #dfd1a2; /* Matte yellow */
+    opacity: 1; /* Fade in */
+    pointer-events: auto; /* Allow interaction */
+    
+}
+
+.fullscreen-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    opacity: 0; /* Hidden initially */
+    transform: scale(0.95); /* Shrink slightly */
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s; /* Smooth fade-in for list */
+}
+
+.fullscreen-menu.active ul {
+    opacity: 1; /* Fade in menu items */
+    transform: scale(1); /* Return to normal size */
+}
+
+.fullscreen-menu li {
+    font-size: 4.5rem;
+    margin: 20px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.fullscreen-menu li span {
+    display: inline-block; /* Wrap each letter */
+    transition: transform 0.2s ease, color 0.2s ease;
+    transform-origin: bottom left;
+}
+
+/* Domino Tilt Animation */
+.fullscreen-menu li:hover span {
+    animation: dominoTilt 0.5s forwards;
+}
+
+.fullscreen-menu li span:nth-child(1) { animation-delay: 0s; }
+.fullscreen-menu li span:nth-child(2) { animation-delay: 0.05s; }
+.fullscreen-menu li span:nth-child(3) { animation-delay: 0.1s; }
+.fullscreen-menu li span:nth-child(4) { animation-delay: 0.15s; }
+.fullscreen-menu li span:nth-child(5) { animation-delay: 0.2s; }
+
+/* Keyframes for Domino Tilt */
+@keyframes dominoTilt {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(20deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Close Button */
+.close-btn {
+   
+     margin: 0 auto;
+    transform: translateX(-50%);
+    font-size: 4rem; /* Bigger 'X' */
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: translateX(-50%) scale(1.2); /* Subtle hover effect */
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .logo img {
+        max-height: 60px;
+    }
+
+    .menu img {
+        max-height: 40px;
+    }
+
+    .nav-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .fullscreen-menu li {
+        font-size: 3.7rem;
+    }
+}
+
+
+/* Keyframes for sliding and jumping animation */
+@keyframes slideAndJump {
+    0% {
+        transform: translateX(-100%) translateY(50px); /* Start off-screen and below */
+        opacity: 0; /* Start invisible */
+    }
+    60% {
+        transform: translateX(20px) translateY(-10px); /* Slide in and jump up */
+        opacity: 1; /* Make it visible */
+    }
+    100% {
+        transform: translateX(0) translateY(0); /* Settle into place */
+    }
+}
+
+/* Apply the animation to the images */
+.abtImg1, .abtImg2 {
+    animation: slideAndJump 1s ease-out forwards;
+}
+
+/* Optional: Add a delay for staggered animation */
+.abtImg1 {
+    animation-delay: 0.2s;
+}
+
+.abtImg2 {
+    animation-delay: 0.6s;
+}
+
+
+
+
+
+
+.font
+{
+    font-family: king;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.big-paren {
+    font-size: 2.5em; /* Adjust this to make the parentheses bigger */
+    font-weight: bold;
+    color:#CAE2C8;
+}
+
+
+
+@media (max-width: 768px) {
+    .Abthero-2
+{
+  margin-top: 0vh;
+   
+}
+}
+
+@media (min-width: 1024px) {
+    .Abthero-2 {
+      margin-top: -80vh; /* Reset or change the style after 786px */
+    }
+  }
+@media (min-width: 1440px) {
+  .Abthero-2 {
+    margin-top: -60vh; /* Reset or change the style after 786px */
+  }
+}
+
+
+.AbtMe
+{
+    font-family: king;
+    color:#CAE2C8;
+}
+
+.abtImg1, .abtImg2
+{
+    width: 100%;
+    height:100%;
+    object-fit: contain;
+}
+
+.abt-header {
+    font-size: clamp(36px, 5vw, 98px); /* Minimum 36px, responsive value using 5% of viewport width, max 98px */
+}
+
+.abt-p {
+    font-size: clamp(16px, 2vw, 25px); /* Minimum 16px, responsive value using 2% of viewport width, max 25px */
+}
+
+.hobbies-header
+{
+  
+    background-color: rgb(49, 129, 49);
+  font-size: 98px;
+}
+
+.boardIMG
+{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.diceimg
+{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+
+
+
+
+/* FOOTER */
+
+
+.footer-sec
+{
+    background-color: #E8F8E4;
+
+}
+
+.footcol1
+{
+  
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.footcol2
+{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    justify-content: center; /* Centers the content vertically if necessary */
+    text-align: center; /* Centers the text within its container */
+}
+
+.footcol3
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.foot-sec1
+{
+    width: 9vw;
+    font-size: clamp(40px, 10vw, 126px);
+    padding: 1em;
+    color: #FDAF7E;
+    font-family: gofak;
+    
+  
+
+}
+
+.exclamation {
+    font-size: 350px; /* Apply a large font size only to the exclamation mark */
+    vertical-align: top; /* Aligns the exclamation mark with "Hi" */
+    line-height: 0.2; /* Adjust line-height to prevent vertical shift */
+
+}
+
+
+ 
+
+.box1
+{
+  
+    font-size: clamp(1.5rem, 5vw, 3.125rem);
+    font-family: afteris;
+    padding: 1em;
+    display: flex;      
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+.box2
+{
+    height: 3vh;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: adrin;
+    font-size: clamp(18px, 4vw, 48px);
+   
+
+   
+
+}
+
+.box3
+{
+    height:10vh;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.box3 img
+{ 
+    transition: transform 0.3s ease; 
+    cursor: pointer; /* Smooth animation for scaling */
+}
+
+    
+.box3 img:hover {
+        transform: scale(1.2); 
+      
+    }
+    
+
+.footer-btn
+{
+    width:200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer-img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.footer-wrapper {
+    background-color: #E8F8E4; /* Extends the background color */
+}
+
+
+/* GLOBAL BUTTON */
+
+.circle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centering on the screen */
+}
+
+.button-container .circle {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50%; /* Oval shape by default */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    overflow: hidden;
+    background-color: transparent;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.button-container .circle::before,
+.button-container .circle::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.button-container .circle::before {
+    transform: rotate(5deg);
+}
+
+.button-container .circle::after {
+    transform: rotate(-5deg);
+}
+
+.button-container .circle:hover {
+    transform: scale(1.1); /* Zoom effect */
+    background-color: rgb(241, 248, 145);
+    color: white;
+    border-color: rgb(0, 1, 2);
+}
+
+.button-container .circle:hover::before,
+.button-container .circle:hover::after {
+    border-color: rgb(0, 0, 0);
+}
+
+.button-container .circle span {
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.button-container .circle:hover span {
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .button-container .circle {
+        width: 160px;
+        height: 80px;
+    }
+
+    .button-container .circle span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .button-container .circle {
+        width: 160px;
+        height: 80px;
+        border-radius: 50%; /* Keep it oval on tablet, but ensure smooth responsiveness */
+    }
+
+    .button-container .circle span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-container .circle {
+        width: 150px; /* Keeping oval size */
+        height: 75px;
+        border-radius: 50%; /* Oval shape */
+    }
+
+    .button-container .circle span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    .button-container .circle {
+        width: 140px; /* Adjusting size for very small screens */
+        height: 70px;
+        border-radius: 50%; /* Oval shape */
+    }
+
+    .button-container .circle span {
+        font-size: 13px;
+    }
+}

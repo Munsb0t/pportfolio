@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="work.css">
+
+</head>
+
+<body>
+
+<!-- Nav -->
+<div class="nav-container">
+    <a href="index.html"> 
+        <div class="logo">
+        <img src="images/logo3.png" alt="Website Logo">
+    </div>
+</a>
+    <div class="menu">
+        <img src="images/menu3.png" alt="Menu Icon" id="menu-icon">
+    </div>
+</div>
+
+<!-- Full-Screen Menu -->
+<div class="fullscreen-menu" id="fullscreen-menu">
+    <span class="close-btn" id="close-btn">&times;</span>
+    <ul>
+        <li>
+            <a href="index.html">
+                <span>H</span><span>O</span><span>M</span><span>E</span>
+            </a>
+        </li>
+        <li>
+            <a href="work.html">
+                <span>W</span><span>O</span><span>R</span><span>K</span>
+            </a>
+        </li>
+        <li>
+            <a href="aboutMe.html">
+                <span>A</span><span>B</span><span>O</span><span>U</span><span>T</span>
+            </a>
+        </li>
+        <li>
+            <a href="contact.html">
+                <span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+   
+
+    
+
+
+    <div class="main-box">
+
+
+       <div class="work-type">
+           <div class="title"> UI <br> UX</div>
+           <div class="title-info"> See a collection of my UI/UX designs</div>
+           
+           <div class="button-container">
+            <a href="uiuxcollection.html"> 
+            <div class="circle">
+                <span>DISCOVER</span>
+            </div>
+        </div>
+         </a>
+          
+
+           
+       </div>
+
+       <div class="work-type">
+        <div class="title">FRONT<br>END</div>
+           <div class="title-info"> See a collection of my UI/UX designs</div>
+
+           <div class="button-container">
+            <a href="frontendwork.html"> 
+            <div class="circle">
+                <span>DISCOVER</span>
+            </div>
+        </div>
+         </a>
+          
+          
+       </div>
+
+       <div class="work-type">
+           <div class="title3">SOCIAL<br> MARKETING</div>
+           <div class="title-info3"> See a collection of my UI/UX designs</div>
+           
+           <div class="button-container">
+            <a href="work.html"> 
+            <div class="circle">
+                <span>DISCOVER</span>
+            </div>
+        </div>
+         </a>
+          
+       </div>
+
+    </div>
+  
+
+
+ <!-- FOOTER -->
+
+ <div class="footer-wrapper">
+    <div class="container footer-sec">
+        <div class="row">
+            <div class="col-3 footcol1">
+                <div class="foot-sec1">Hi<span class="exclamation">!</span></div>
+            </div>
+            <div class="col-6 footcol2">
+                <div class="box1">You have an idea? I got the vision</div>
+                <div class="box2">Let’s get in touch</div>
+                <div class="box3">
+                    <!-- LinkedIn Anchor -->
+                    <a href="https://www.linkedin.com/in/tanha-munia-216839232/" target="_blank">
+                        <img src="images/lnk.svg" alt="LinkedIn">
+                    </a>
+                    <!-- GitHub Anchor -->
+                    <a href="https://github.com/Munsb0t" target="_blank">
+                        <img src="images/GitHub.png" alt="GitHub">
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-5 tBtn">
+                    <div class="button-container">
+                        <!-- Discover Button Anchor (to email) -->
+                        <a href="mailto:tanhaamuniaa@gmail.com"> 
+                            <div class="circle">
+                                <span>DISCOVER</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 footcol3">
+                <img class="footer-img" src="images/footerIMG.png" alt="Footer Image">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </section>
+
+
+
+
+
+<script>
+    // Menu toggle logic
+const menuIcon = document.getElementById("menu-icon");
+const fullscreenMenu = document.getElementById("fullscreen-menu");
+const closeBtn = document.getElementById("close-btn");
+
+// Open the fullscreen menu
+menuIcon.addEventListener("click", () => {
+    fullscreenMenu.classList.add("active");
+});
+
+// Close the fullscreen menu
+closeBtn.addEventListener("click", () => {
+    fullscreenMenu.classList.remove("active");
+});
+
+</script>
+  
+</body>
+</html>

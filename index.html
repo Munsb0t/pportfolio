@@ -1,0 +1,915 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="homethree.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+    
+</head>
+<body>
+
+<!-- Nav -->
+<div class="nav-container">
+    <a href="index.html"> 
+        <div class="logo">
+        <img src="images/logo3.png" alt="Website Logo">
+    </div>
+</a>
+    <div class="menu">
+        <img src="images/menu3.png" alt="Menu Icon" id="menu-icon">
+    </div>
+</div>
+
+<!-- Full-Screen Menu -->
+<div class="fullscreen-menu" id="fullscreen-menu">
+    <span class="close-btn" id="close-btn">&times;</span>
+    <ul>
+        <li>
+            <a href="index.html">
+                <span>H</span><span>O</span><span>M</span><span>E</span>
+            </a>
+        </li>
+        <li>
+            <a href="work.html">
+                <span>W</span><span>O</span><span>R</span><span>K</span>
+            </a>
+        </li>
+        <li>
+            <a href="aboutMe.html">
+                <span>A</span><span>B</span><span>O</span><span>U</span><span>T</span>
+            </a>
+        </li>
+        <li>
+            <a href="contact.html">
+                <span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-img-cont hero-img" >
+          <img src="images/h1.svg">
+        </div>
+      
+        <div class="hero-img-cont2 hero-img">
+          <img src="images/h2.svg">
+        </div>
+      
+      
+        <div class="hero-img-cont3 hero-img">
+          <img src="images/h3.svg">
+        </div>
+        
+        <div class="hero-img-cont4 hero-img">
+          <img src="images/h4.svg">
+        </div>
+      
+        <div class="hero-img-cont5 hero-img">
+          <img src="images/h5.svg">
+        </div>
+      
+        <div class="hero-img-cont6 hero-img" data-aos="zoom-in-down">
+          <img src="images/h6.svg">
+        </div>
+      
+
+
+
+
+        
+      
+      </section>
+      
+
+
+<!--WORK SAMPLE SECTION -->
+
+
+<section class="work-feature" id="workFeatureSection">
+    <div class="container">
+        <div class="row row-cols-1">
+            <div class="col-lg-6 col-8 offset-lg-3 offset-2">
+                <button class="btnWork" id="toggleButton">Peek into my process</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="originalContent">
+        <br>
+        <div class="container" >
+            <div class="row row-cols-1">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-lg-7 col-xl-8 offset-lg-1 col-md-6 t1">
+                            <h1>Check out</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 offset-lg-2 offset-lg-1 col-md-6 offset-md-1 t2">
+                    <h1>some of</h1>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-7 t3">
+                            <h1>my selected</h1>
+                        </div>
+                        <div class="col-lg-3 offset-lg-1 offset-xs-0 col-md-5 tBtn">
+                            <div class="button-container" data-aos="fade-down"
+                            data-aos-easing="linear"
+                            data-aos-duration="1500">
+                                <a href="work.html">
+                                    <div class="circle">
+                                        <span>DISCOVER</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 t4">
+                    <h1 data-aos="fade-left"
+                    data-aos-anchor="#example-anchor"
+                    data-aos-offset="800"
+                    data-aos-duration="2000">Work</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Hidden Alternative Content -->
+<div id="alternativeContent" style="display: none;">
+    <div class="fluid-container hidden-pg">
+        <div class="row">
+            <div class="col offset-1">
+                <br>
+                <div class="button-container hidden-btn" id="closeButton">
+                    <div class="circle">
+                        <span>CLOSE</span>
+                    </div>
+                </div>
+                <h1 class="hiddenH1">What’s my work process like?</h1>
+                <div id="ovalContainer"></div> <!-- Container for falling ovals -->
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+
+
+
+
+<!--SKILL LEVEL  SECTION -->
+
+    <section class="skill-level">
+        <div class="container">
+      
+            <div class="row row-cols-1">
+                <div class="col-lg-6 col-8 offset-lg-3 offset-2 ">
+                    <button id="toggleButton2" class="btnWork2">What I am upto?</button>
+              
+                 </div>
+          
+            </div>
+        </div>
+
+        <div id="originalContent2">
+          <div class="container-fluid">
+            <div class="row">
+                <div class="col-10 offset-1 outer-container">
+             <br> <br>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-10 offset-1 inner-container">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-6 p1">Programming languages</div>
+                                        <div class="col-6 l1">Level</div>
+                                    </div>
+                                    <div class="col-12 k1">
+                                         <div class="row">
+                                            <div class="col-6 lang-name1">HTML</div>
+                                            <div class="col-6 lang-bar1">
+                                                <div class="col">
+                                                    <div class="row gap-row">
+                                                        <div class="col-3 offset-lg-1 level-1 html-lvl-1">1</div>
+                                                        <div class="col-3 level-2 html-lvl-2">2</div>
+                                                        <div class="col-3 level-3 html-lvl-3">3</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 lang-name2">CSS</div>
+                                            <div class="col-6 lang-bar2">
+                                                <div class="col">
+                                                    <div class="row gap-row">
+                                                        <div class="col-3 offset-lg-1 level-1 css-lvl-1">1</div>
+                                                        <div class="col-3 level-2 css-lvl-2">2</div>
+                                                        <div class="col-3 level-3 css-lvl-3">3</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 lang-name3">JS</div>
+                                            <div class="col-6 lang-bar3">
+                                                <div class="col">
+                                                    <div class="row gap-row">
+                                                        <div class="col-3 offset-lg-1 level-1 js-lvl-1">1</div>
+                                                        <div class="col-3 level-2 js-lvl-2">2</div>
+                                                        <div class="col-3 level-3 js-lvl-3">3</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 lang-name4">REACT18</div>
+                                            <div class="col-6 lang-bar4">
+                                                <div class="col">
+                                                    <div class="row gap-row">
+                                                        <div class="col-3 offset-lg-1 level-1 rs-lvl-1">1</div>
+                                                        <div class="col-3 level-2 rs-lvl-2">2</div>
+                                                        <div class="col-3 level-3 rs-lvl-3">3</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 lang-name5">BOOTSTRAP</div>
+                                            <div class="col-6 lang-bar5">
+                                                <div class="col">
+                                                    <div class="row gap-row">
+                                                        <div class="col-3 offset-lg-1 level-1 bs-lvl-1">1</div>
+                                                        <div class="col-3 level-2 bs-lvl-2">2</div>
+                                                        <div class="col-3 level-3 bs-lvl-3">3</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           <div class="col-12 tBtn">
+                                                <div class="button-container">
+                                                    <div class="circle">
+                                                        <!-- This is your existing "NEXT" text, keep it here -->
+                                                        <span id="next-text">NEXT</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+          
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+          
+                    </div>
+                </div>
+          
+            </div>
+          </div>
+      </div>
+
+
+ <!-- New Design Section -->
+
+ <div id="alternativeContent2" style="display: none;">
+    <div class="container hidden-pg2">
+        <div class="row">
+            <div class="col-8">
+                <br>
+                <div class="button-container hidden-btn" id="closeButton2">
+                    <div class="circle">
+                        <span>CLOSE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="typewriter">
+                    <div class="div">
+                        <p>While I’m diving deep into MERN full-stack development and refining my UI/UX skills, I remain captivated by the transformative power
+                             of AI and ML—and can’t wait to explore new possibilities in these fields</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</section>
+
+
+
+
+
+      <!-- Services provide -->
+
+  <section>
+      <div id="originalContent3">
+
+      <div class="container-fluid slider-sec">
+      
+        <div class="container">
+      
+            <div class="row row-cols-1">
+                <div class="col-lg-6 col-8 offset-lg-3 offset-2 ">
+                    <button id="toggleButton3" class="btnWork3">Let’s get to work</button>
+              
+                 </div>
+          
+            </div>
+        </div>
+
+
+        <div class="slider">
+            <h1>Servcies I can provide</h1>
+            <div class="nav">
+                <div class="next">
+                    <svg viewBox="0 0 50 9">
+                        <path d="m0 4.5 5-3m 5 3 5 3m45-3h-77"></path>
+                    </svg>
+                </div>
+                <div class="prev">
+                    <svg viewBox="0 0 50 9">
+                        <path d="m0 4.5 5-3m 5 3 5 3m45-3h-77"></path>
+                    </svg>
+                </div>
+            </div>
+           <div class="item is-active">
+            <div class="content">
+                <div class="wrap">UI/UX</div>
+            </div>
+            <div class="img-wrapper">
+                <div class="img">
+                    <img src="images/uicard00.svg">
+                </div>
+            </div>
+           </div>
+        
+           <div class="item">
+            <div class="content">
+                <div class="wrap">Frontend Development</div>
+            </div>
+            <div class="img-wrapper">
+                <div class="img">
+                    <img src="images/uicard02.svg">
+                </div>
+            </div>
+           </div>
+        
+        
+           <div class="item">
+            <div class="content">
+                <div class="wrap">Social Media Marketing</div>
+            </div>
+            <div class="img-wrapper">
+                <div class="img">
+                    <img src="images/uicard03.svg">
+                </div>
+            </div>
+           </div>
+        
+        
+        </div>
+    
+    </div>
+</div>
+
+
+
+
+<!-- Hidden Alternative Content -->
+<div id="alternativeContent3" style="display: none; background: #f0f0f0; height: 100vh;">
+    <div class="fluid-container hidden-pg3">
+        <div class="row">
+            <div class="col-8">
+                <br>
+                <div class="button-container hidden-btn" id="closeButton3">
+                    <div class="circle">
+                        <span>CLOSE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <h1 class="hiddenH1">Big ideas<br>Bold moves<br>Smiles all the way!</h1>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+
+    <div class="footer-wrapper">
+        <div class="container footer-sec">
+            <div class="row">
+                <div class="col-3 footcol1">
+                    <div class="foot-sec1">Hi<span class="exclamation">!</span></div>
+                </div>
+                <div class="col-6 footcol2">
+                    <div class="box1">You have an idea? I got the vision</div>
+                    <div class="box2">Let’s get in touch</div>
+                    <div class="box3">
+                        <!-- LinkedIn Anchor -->
+                        <a href="https://www.linkedin.com/in/tanha-munia-216839232/" target="_blank">
+                            <img src="images/lnk.svg" alt="LinkedIn">
+                        </a>
+                        <!-- GitHub Anchor -->
+                        <a href="https://github.com/Munsb0t" target="_blank">
+                            <img src="images/GitHub.png" alt="GitHub">
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-5 tBtn">
+                        <div class="button-container">
+                            <!-- Discover Button Anchor (to email) -->
+                            <a href="mailto:tanhaamuniaa@gmail.com"> 
+                                <div class="circle">
+                                    <span>DISCOVER</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 footcol3">
+                    <img class="footer-img" src="images/footerIMG.png" alt="Footer Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+    function init()
+    {
+      const slider=document.querySelector(".slider");
+      const nextBtn=document.querySelector(".slider .nav .next");
+      const prevBtn=document.querySelector(".slider .nav .prev");
+      const items=document.querySelectorAll(".slider .item");
+    
+      let current=0;
+    
+      items.forEach((item) =>
+      {
+        const textWrapper=item.querySelector(".wrap");
+        textWrapper.innerHTML=textWrapper.textContent.replace(
+               /\S/g, 
+               "<span class='letter'>$&</span>"
+        );
+      });
+    
+      function anim(current, next, callback)
+    
+      {
+        const currentImgs=current.querySelectorAll(".img");
+        const currentText=current.querySelectorAll(".content .letter");
+        const nextImgs=next.querySelectorAll(".img");
+        const nextText=next.querySelectorAll(".content .letter");
+    
+        const t=300;
+        const offset= "-=" + t*0.4;
+        const imgOffset=t*0.8;
+    
+        const t1=anime.timeline({
+          easing: "easeInOutQuint", 
+          duration: t, 
+          complete: callback, 
+    
+        });
+    
+    
+              t1.add({
+                targets: currentText,
+                translateY: [0, "-2rem"], 
+                opacity: [1,0],
+                easing: "easeInQuint", 
+                duration: t,
+                delay: (el, i)=> 30*(i+1),
+              })
+               
+              .add({
+                targets:currentImgs[0],
+                translateY: -600,
+                translateZ: 0,
+                rotate: [0, "-45deg"],
+                opacity:[1,0],
+                easing: "easeInCubic",
+              },
+              offset
+            )
+    
+            .add({
+              targets: current, 
+              opacity:0,
+              visibility: "hidden", 
+              duration: 200,
+              easing: "easeInCubic"
+            })
+    
+    
+            .add({
+              targets: next,
+              opacity:1,
+              visibility: "visible",
+              duration:200,
+            },
+            offset
+          )
+    
+           .add({
+            targets: nextImgs[0],
+            translateY:[600,0],
+            translateZ: 0,
+            rotate: ["45deg", 0],
+            opacity: [0,1],
+            easing: "easeOutCubic"
+    
+           },
+          offset
+        )
+    
+    
+          .add({
+            targets: nextText,
+            translateY: ["2rem", 0],
+            translateZ:0,
+            opacity: [0,1],
+            easing: "easeOutQuint",
+            duration:t*1.5,
+            delay: (el,i)=>30*(i+1),
+          },
+        offset
+         );
+    
+      }
+    
+    
+      let isPlaying=false;
+      function updateSlider(newIndex) 
+      {
+        const currentItem=items[current];
+        const newItem=items[newIndex];
+    
+        function callback()
+        {
+          currentItem.classList.remove("is-active");
+          newItem.classList.add("is-active");
+          current=newIndex;
+          isPlaying=false;
+        }
+    
+        anim(currentItem, newItem, callback);
+      }
+    
+      function next()
+      {
+        if (isPlaying) return;
+        isPlaying=true;
+        const newIndex = current === items.length - 1 ? 0 : current + 1;
+        updateSlider(newIndex);
+      }
+      
+      function prev() {
+      if (isPlaying) return;
+      isPlaying = true;
+      const newIndex = current === 0 ? items.length - 1 : current - 1; // Wrap to last item if at the start
+      updateSlider(newIndex);
+  }
+  
+    
+      nextBtn.onclick = next;
+      prevBtn.onclick = prev;
+  
+     
+    
+    
+      }
+    
+      document.addEventListener("DOMContentLoaded", init);
+  
+    
+
+
+   //skil button 
+ 
+   
+
+
+// Get the menu icon, fullscreen menu, and page content
+// Menu toggle logic
+const menuIcon = document.getElementById("menu-icon");
+const fullscreenMenu = document.getElementById("fullscreen-menu");
+const closeBtn = document.getElementById("close-btn");
+
+
+// Open the fullscreen menu
+menuIcon.addEventListener("click", () => {
+    fullscreenMenu.classList.add("active");
+});
+
+// Close the fullscreen menu
+closeBtn.addEventListener("click", () => {
+    fullscreenMenu.classList.remove("active");
+});
+
+
+
+//Work hidden page:
+
+     document.getElementById("toggleButton").addEventListener("click", function () {
+    document.getElementById("originalContent").style.display = "none";    
+    document.getElementById("alternativeContent").style.display = "block";
+    document.getElementById("toggleButton").style.display = "none";
+    document.getElementById("closeButton").style.display = "inline-block";
+
+    const ovalContainer = document.getElementById("ovalContainer");
+    ovalContainer.innerHTML = ""; // Clear previous ovals
+
+    const ovalNames = ["RESEARCH", "ORGANIZE", "PLAN", "DESIGN", "DELIVER"];
+    const ovals = [];
+    const ovalWidth = window.innerWidth > 500 ? 150 : 100; // Scale down for small screens
+    const ovalHeight = window.innerWidth > 500 ? 80 : 50;
+    const margin = 20; // Minimum margin between ovals
+    const maxTop = window.innerHeight * 0.6; // Limit maximum top position to 60% of the viewport height
+
+    for (let i = 0; i < ovalNames.length; i++) {
+        const oval = document.createElement("div");
+        oval.className = "oval";
+        oval.textContent = ovalNames[i];
+
+        let left, top, isOverlapping;
+
+        do {
+            isOverlapping = false;
+
+            // Generate random position
+            left = Math.random() * (window.innerWidth - ovalWidth); // Horizontal position
+            top = Math.random() * (maxTop - ovalHeight); // Vertical position within 60% of the viewport height
+
+            // Check for overlap with existing ovals
+            for (const otherOval of ovals) {
+                const otherLeft = parseFloat(otherOval.style.left);
+                const otherTop = parseFloat(otherOval.style.top);
+
+                if (
+                    left < otherLeft + ovalWidth + margin &&
+                    left + ovalWidth + margin > otherLeft &&
+                    top < otherTop + ovalHeight + margin &&
+                    top + ovalHeight + margin > otherTop
+                ) {
+                    isOverlapping = true;
+                    break;
+                }
+            }
+        } while (isOverlapping);
+
+        // Set position and rotation
+        oval.style.left = `${left}px`;
+        oval.style.top = `${top}px`;
+        oval.style.transform = `rotate(${Math.random() * 30 - 15}deg)`;
+
+        ovals.push(oval);
+        ovalContainer.appendChild(oval);
+    }
+});
+
+document.getElementById("closeButton").addEventListener("click", function () {
+    document.getElementById("alternativeContent").style.display = "none";
+    document.getElementById("originalContent").style.display = "block";
+    document.getElementById("toggleButton").style.display = "inline-block";
+    document.getElementById("closeButton").style.display = "none";
+});
+
+
+
+
+
+
+//skilll..........//
+
+
+
+document.getElementById("toggleButton2").addEventListener("click", function () {
+    document.getElementById("originalContent2").style.display = "none";
+    document.getElementById("alternativeContent2").style.display = "block";
+    document.getElementById("toggleButton2").style.display = "none";
+});
+
+document.getElementById("closeButton2").addEventListener("click", function () {
+    document.getElementById("alternativeContent2").style.display = "none";
+    document.getElementById("originalContent2").style.display = "block";
+    document.getElementById("toggleButton2").style.display = "inline-block";
+});
+
+
+
+  ////service....///
+
+
+
+//HEXT PAGE
+
+// Functionality for toggling content between original and alternative designs
+// Functionality for toggling content between original and alternative designs
+// Functionality for toggling content between original and alternative designs
+const nextButton = document.getElementById("next-text");
+const titleElement = document.querySelector(".p1");
+
+const languageData = [
+    {
+        title: "Frontend & Frameworks",
+        names: ["HTML", "CSS", "JS", "REACT18", "BOOTSTRAP"],
+    },
+    {
+        title: "Programming Languages",
+        names: ["Python", "C", "SQL", "Java", "C++"],
+    },
+    {
+        title: "UI/UX Platforms",
+        names: ["Figma", "Framer", "Wireframing & Prototyping", "User Research", "Responsive Design"],
+    },
+];
+
+let currentIndex = 0;
+
+// Function to initialize content
+function initializeContent() {
+    updateContent();
+}
+
+// Function to update content dynamically
+function updateContent() {
+    titleElement.textContent = languageData[currentIndex].title;
+
+    const langNameElements = document.querySelectorAll(
+        ".lang-name1, .lang-name2, .lang-name3, .lang-name4, .lang-name5"
+    );
+
+    const skillBars = document.querySelectorAll(".skill-bar");
+
+    langNameElements.forEach((element, index) => {
+        if (languageData[currentIndex].names[index]) {
+            element.textContent = languageData[currentIndex].names[index];
+            element.style.display = "block"; // Show only existing elements
+        } else {
+            element.style.display = "none"; // Hide extra elements
+        }
+    });
+
+    // Handle skill bar visibility
+    skillBars.forEach((bar, index) => {
+        if (
+            currentIndex === 2 &&
+            (index === 0 || index === 1) // Show bars for Figma and Framer only
+        ) {
+            bar.style.display = "block";
+        } else if (currentIndex === 2) {
+            bar.style.display = "none";
+        } else {
+            bar.style.display = "block"; // Show all bars for other pages
+        }
+    });
+}
+
+// Initialize the content on page load
+initializeContent();
+
+// Handle "NEXT" button clicks
+nextButton.addEventListener("click", function () {
+    currentIndex = (currentIndex + 1) % languageData.length;
+    updateContent();
+
+    // Update button text
+    nextButton.textContent = currentIndex === 0 ? "BACK" : "NEXT";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//cursor trail
+document.getElementById("toggleButton3").addEventListener("click", function () {
+    document.getElementById("originalContent3").style.display = "none";
+    document.getElementById("alternativeContent3").style.display = "block";
+    document.getElementById("toggleButton3").style.display = "none";
+});
+
+document.getElementById("closeButton3").addEventListener("click", function () {
+    document.getElementById("alternativeContent3").style.display = "none";
+    document.getElementById("originalContent3").style.display = "block";
+    document.getElementById("toggleButton3").style.display = "inline-block";
+});
+
+
+
+//cursor trail
+let images = [
+    'images/sun.png',
+  
+   
+    'images/sun.png'
+
+];
+
+document.getElementById("alternativeContent3").addEventListener('mousemove', function (e) {
+    let container = document.getElementById("alternativeContent3");
+    let imageElement = document.createElement('img'); 
+    imageElement.classList.add('emoji-trail');
+
+    let x = e.offsetX;
+    let y = e.offsetY;
+
+    imageElement.style.left = x + 'px';
+    imageElement.style.top = y + 'px';
+
+    let randomImage = images[Math.floor(Math.random() * images.length)];
+    imageElement.src = randomImage;
+
+    let size = Math.random() * 100; // Larger range for random size
+    imageElement.style.width = 30 + size + 'px'; // Larger minimum size
+    imageElement.style.height = 30 + size + 'px'; // Larger minimum size
+
+    container.appendChild(imageElement);
+
+    setTimeout(function () {
+        imageElement.remove();
+    }, 1000);
+});
+
+
+
+
+
+
+
+
+
+    </script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+    
+
+
+
+
+
+
+</body>
+
+</html>

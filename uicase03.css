@@ -1,0 +1,972 @@
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #FCFFE5;
+    overflow-x: hidden;
+
+}
+
+@font-face {
+    font-family:afteris ;
+    src: url(fonts/afteris.otf);
+}
+
+@font-face {
+    font-family:voyage;
+    src: url(fonts/MADEVoyagerPERSONAL_USE-Bold.otf);
+}
+
+@font-face {
+    font-family:kings;
+    src: url(fonts/KingsmanDemo-1GVgg.ttf);
+}
+
+@font-face {
+    font-family:bohem;
+    src: url(fonts/Bohemian\ Soul.otf);
+}
+@font-face {
+    font-family: role;
+    src: url(fonts/role.otf);
+}
+@font-face {
+    font-family:gofak;
+    src: url(fonts/GofakClassyRegular-lxB1y.otf);
+}
+
+@font-face {
+    font-family: adrin;
+    src: url(fonts/adrin.otf);
+}
+
+a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Makes the text color the same as its parent */
+}
+
+
+/* Navigation Bar */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FCFFE5;
+
+    box-sizing: border-box;
+}
+
+.logo img {
+    max-height: 80px;
+}
+
+.menu img {
+    max-height: 50px;
+    cursor: pointer;
+}
+
+/* Reset link styles */
+.fullscreen-menu ul li a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent (e.g., li or span) */
+    display: inline-block; /* Ensure proper layout for spans inside */
+}
+
+/* Optional: Hover effect */
+.fullscreen-menu ul li a:hover {
+    color: #7d9179; /* Change to your desired hover color */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+
+/* Full-Screen Menu */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Initial dark background */
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Prevent interaction when hidden */
+    transition: background-color 0.6s ease, opacity 0.4s ease; /* Smooth fade-in */
+    z-index: 1000;
+    font-family: afteris;
+}
+
+.fullscreen-menu.active {
+    background-color: #dfd1a2; /* Matte yellow */
+    opacity: 1; /* Fade in */
+    pointer-events: auto; /* Allow interaction */
+    
+}
+
+.fullscreen-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    opacity: 0; /* Hidden initially */
+    transform: scale(0.95); /* Shrink slightly */
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s; /* Smooth fade-in for list */
+}
+
+.fullscreen-menu.active ul {
+    opacity: 1; /* Fade in menu items */
+    transform: scale(1); /* Return to normal size */
+}
+
+.fullscreen-menu li {
+    font-size: 4.5rem;
+    margin: 20px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.fullscreen-menu li span {
+    display: inline-block; /* Wrap each letter */
+    transition: transform 0.2s ease, color 0.2s ease;
+    transform-origin: bottom left;
+}
+
+/* Domino Tilt Animation */
+.fullscreen-menu li:hover span {
+    animation: dominoTilt 0.5s forwards;
+}
+
+.fullscreen-menu li span:nth-child(1) { animation-delay: 0s; }
+.fullscreen-menu li span:nth-child(2) { animation-delay: 0.05s; }
+.fullscreen-menu li span:nth-child(3) { animation-delay: 0.1s; }
+.fullscreen-menu li span:nth-child(4) { animation-delay: 0.15s; }
+.fullscreen-menu li span:nth-child(5) { animation-delay: 0.2s; }
+
+/* Keyframes for Domino Tilt */
+@keyframes dominoTilt {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(20deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Close Button */
+.close-btn {
+   
+     margin: 0 auto;
+    transform: translateX(-50%);
+    font-size: 4rem; /* Bigger 'X' */
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: translateX(-50%) scale(1.2); /* Subtle hover effect */
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .logo img {
+        max-height: 60px;
+    }
+
+    .menu img {
+        max-height: 40px;
+    }
+
+    .nav-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .fullscreen-menu li {
+        font-size: 3.7rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* case header */
+ 
+.section-header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;
+}
+
+
+.case-header-container
+{
+    display: flex;
+    width:80vw;
+    height:17vh;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+   
+
+   
+}
+
+.case-index1
+{
+   
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: clamp(1.5rem, 5vw + 1vh, 60px);
+
+
+}
+
+.case-name1
+{
+   
+    width:auto;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: afteris;
+    font-size: clamp(1.5rem, 4vw + 1vh, 55px); 
+ 
+}
+
+.case-type1
+{
+    width:80%;
+    height:auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin: 10px;
+    padding-left: 60%;
+    font-size: clamp(1.2rem, 3vw + 1vh, 33px);
+    font-family: kings;
+
+  
+}
+
+
+
+@media (max-width: 1024px) { 
+   .case-type1
+   {
+    padding-left: 40%;
+   }
+}
+
+
+@media (max-width: 400px) { 
+    .case-name1
+    {
+     font-size: 1.1rem;
+    }
+    .case-type1
+    {
+     margin-top: -5vh;
+    }
+
+
+ }
+ 
+
+
+
+
+
+
+
+
+/* image display */
+
+.img-display
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: -80px;
+}
+.img
+{
+     height: auto;
+     width: 85vw;
+     margin-top: 15px;
+
+}
+
+.case-img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+@media screen and (max-width: 500px){
+            
+    .case-img
+        {
+            object-fit: contain;
+        
+        }
+
+}
+
+/* Project Overview */
+
+
+
+.project {
+    height: 100vh; /* Allows for content resizing */
+    width: auto;
+    margin-top: -30px;
+    padding-bottom: 30px; /* Adds space before the next section */
+}
+
+.p-header
+{
+    width: 50vw;
+    height:auto;
+    display: flex;
+    font-size: clamp(1.8rem, 5vw + 1vh, 66px);
+    font-family: bohem;
+    margin-left:95px;
+    justify-content: center;
+    align-items: center;
+}
+
+.overview-box
+{
+    display: flex;
+    width: 88vw;
+    height:88%;
+    margin-top: 46px;
+    margin-left:auto;
+    margin-right: auto;
+
+}
+
+.points
+{
+    
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    font-size: clamp(1.6rem, 4vw + 1vh, 55px);
+    font-family: afteris;
+  
+    justify-content: center;
+    align-items: center;
+
+   
+
+}
+
+.points1, .points2, .points3
+{
+
+    width: 100%;
+    height: 32%;
+    padding-top: 30px;
+    text-align: center;
+
+}
+
+.detail
+{
+   
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    font-size: clamp(20px, 2vw + 1rem, 25px); /* Responsive font size */
+    font-family:role;
+
+}
+
+.detail1, .detail2, .detail3
+{
+    width: 100%;
+    height: 32%;
+    text-align: center;
+    padding-top: 4.5vh;
+}
+
+
+/*img display*/
+
+.case-img-display
+{
+  
+    height:auto;
+    width:auto;
+    padding-top: 30px; /* Adds space to avoid overlap with .project */
+    margin-top: 20px; 
+}
+
+.client-name-container
+{
+    width: auto;
+    height:10vh;
+    
+    display: flex;
+    gap:15px;
+    margin-top: 4vh;
+}
+
+.client-name
+{
+    width: 50vw;
+    height:auto;
+    display: flex;
+    font-size: clamp(1.8rem, 4vw + 1vh, 46px);
+    font-family: bohem;
+    margin-left:15vw;
+    text-align: center;
+}
+
+
+
+
+
+.screen-name
+{
+    width:80%;
+    height: 100%;
+    text-align: start;
+    font-size: clamp(1.8rem, 4vw + 1vh, 46px);
+   
+}
+
+.slider
+{
+    display: flex;
+    width:20vw;
+    height:10vh;
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    gap:1vw;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: palevioletred;
+    width: clamp(2px, 2vw, 20px); /* Responsive width */
+    height: clamp(20px, 2vw, 20px); /* Responsive height */
+
+}
+
+.ui-img-container {
+    width: 90vw; /* Slightly reduce width to prevent stretching on large screens */
+    max-height: 85vh; /* Sets a max height to maintain vertical space on large screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.ui-img-display {
+    display: flex; 
+    flex-direction: row; 
+    gap: 2%; /* Increased gap for larger screens */
+    width: 100%;
+    height: auto;
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.screen1, .screen2, .screen3 {
+    width: clamp(300px, 40vw, 650px); /* Expands more on larger screens, but with a max width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Spacing within each screen section */
+}
+
+.ui-img {
+    width: 100%; 
+    height: auto;
+    max-height: 700px; /* Caps the image size on larger screens */
+    object-fit: contain;
+}
+
+.other-proj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    padding: 30px;
+    font-size: clamp(1.8rem, 5vw + 1vh, 66px);
+    font-family: bohem;
+   
+    text-align: center;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between text and button */
+   
+}
+
+.go-to-other-proj {
+    font-family: gofak;
+}
+
+.view-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.view-button:hover {
+    background-color: darkcyan;
+}
+
+.go-to-other-proj {
+    font-family: gofak;
+}
+
+
+
+.ui-img
+{
+    width: 100%;
+    height:100%;
+    object-fit: contain;
+}
+
+
+.slider{
+    width: 1350px;
+    max-width: 100vw;
+    height: 890px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.slider .list img{
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit:contain;
+}
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(250, 177, 20, 0.333);
+    color: #000000;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #d38a37;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #ebc995;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+@media screen and (max-width: 768px){
+    .slider{
+        height: 400px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 481px){
+    .detail {
+        font-size: 15px; /* Adjust size for medium screens */
+    }
+}
+
+@media (max-width: 768px){
+    .detail {
+        font-size: 15px; /* Adjust size for medium screens */
+    }
+}
+
+@media (max-width: 1025px){
+    .detail {
+        font-size: 14px; /* Adjust size for medium screens */
+    }
+}
+
+@media (max-width: 321px){
+    .detail {
+        font-size: 11px; /* Adjust size for medium screens */
+        margin-left: 20px;
+    }
+}
+
+
+@media (max-width: 1182px){
+    .detail {
+        font-size: 12.5px; /* Adjust size for medium screens */
+    }
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .client-name{
+        margin-left: 2vw;
+        margin-right: 2vw;/* Smaller margin for small screens */
+    }
+}
+@media (max-width: 768px) {
+    .p-header {
+        font-size: clamp(1.8rem, 4vw + 1vh, 48px);
+    }
+  
+    .ui-img-container {
+        width: 100vw; /* Expands full width on smaller screens */
+        max-height: 80vh; /* Caps image container height */
+    }
+}
+
+
+
+
+
+          /* FOOTER */
+
+
+.footer-sec
+{
+    background-color: #E8F8E4;
+
+}
+
+.footcol1
+{
+  
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.footcol2
+{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    justify-content: center; /* Centers the content vertically if necessary */
+    text-align: center; /* Centers the text within its container */
+}
+
+.footcol3
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.foot-sec1
+{
+    width: 9vw;
+    font-size: clamp(40px, 10vw, 126px);
+    padding: 1em;
+    color: #FDAF7E;
+    font-family: gofak;
+    
+  
+
+}
+
+.exclamation {
+    font-size: 350px; /* Apply a large font size only to the exclamation mark */
+    vertical-align: top; /* Aligns the exclamation mark with "Hi" */
+    line-height: 0.2; /* Adjust line-height to prevent vertical shift */
+
+}
+
+
+ 
+
+.box1
+{
+  
+    font-size: clamp(1.5rem, 5vw, 3.125rem);
+    font-family: afteris;
+    padding: 1em;
+    display: flex;      
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+.box2
+{
+    height: 3vh;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: adrin;
+    font-size: clamp(18px, 4vw, 48px);
+   
+
+   
+
+}
+
+.box3
+{
+    height:10vh;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    
+}
+.box3 img
+{ 
+    transition: transform 0.3s ease; 
+    cursor: pointer; /* Smooth animation for scaling */
+}
+
+    
+.box3 img:hover {
+        transform: scale(1.2); 
+      
+    }
+.footer-btn
+{
+    width:200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer-img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.footer-wrapper {
+    background-color: #E8F8E4; /* Extends the background color */
+}
+
+
+/* GLOBAL BUTTON */
+
+.circle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centering on the screen */
+}
+
+.button-container .circle {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50%; /* Oval shape by default */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    overflow: hidden;
+    background-color: transparent;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.button-container .circle::before,
+.button-container .circle::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.button-container .circle::before {
+    transform: rotate(5deg);
+}
+
+.button-container .circle::after {
+    transform: rotate(-5deg);
+}
+
+.button-container .circle:hover {
+    transform: scale(1.1); /* Zoom effect */
+    background-color: rgb(241, 248, 145);
+    color: white;
+    border-color: rgb(0, 1, 2);
+}
+
+.button-container .circle:hover::before,
+.button-container .circle:hover::after {
+    border-color: rgb(0, 0, 0);
+}
+
+.button-container .circle span {
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.button-container .circle:hover span {
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .button-container .circle {
+        width: 160px;
+        height: 80px;
+    }
+
+    .button-container .circle span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .button-container .circle {
+        width: 160px;
+        height: 80px;
+        border-radius: 50%; /* Keep it oval on tablet, but ensure smooth responsiveness */
+    }
+
+    .button-container .circle span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-container .circle {
+        width: 150px; /* Keeping oval size */
+        height: 75px;
+        border-radius: 50%; /* Oval shape */
+    }
+
+    .button-container .circle span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    .button-container .circle {
+        width: 140px; /* Adjusting size for very small screens */
+        height: 70px;
+        border-radius: 50%; /* Oval shape */
+    }
+
+    .button-container .circle span {
+        font-size: 13px;
+    }
+}
